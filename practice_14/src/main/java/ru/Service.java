@@ -4,11 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 @Controller
 public class Service {
-    ArrayList<AllFunc> a;
+    List<AllFunc> a = new ArrayList<AllFunc>();
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String getTestPage() {
@@ -31,8 +32,9 @@ public class Service {
     public void del() {
         a = new ArrayList<AllFunc>();
     }
+
     @RequestMapping(value = "/home/out", method = RequestMethod.GET)
-    public ArrayList<AllFunc> out() {
+    public List<AllFunc> out() {
         return a;
     }
 
