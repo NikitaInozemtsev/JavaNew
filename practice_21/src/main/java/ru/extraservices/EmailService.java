@@ -1,4 +1,4 @@
-package ru.services;
+package ru.extraservices;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
