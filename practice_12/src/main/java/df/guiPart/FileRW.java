@@ -20,13 +20,13 @@ public class FileRW implements RW{
     public void createFile() {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(inputFile));
-//            FileWriter fw = new FileWriter(inFile);
-//            fw.write("Kostya");
-//            fw.write("Nikita");
+
             Thread.sleep(500);
-            //writer.write("Kostya");
+            writer.write("pizza ");
+            writer.write("bigpizza");
             writer.flush();
             System.out.println("i added smth");
+            writer.close();
             read();
         }
         catch (IOException | InterruptedException e) {
@@ -69,18 +69,23 @@ public class FileRW implements RW{
             else {
                 for (int i = 0; i < data.length; i++) {
                     writer.write(data[i]);
+                    writer.write(" ");
                 }
             }
-            delete();
+            writer.flush();
+            writer.close();
+           // delete();
 
         }
         catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
+
     @PreDestroy
     private void delete() {
-        //inFile.delete();
+        File f = new File("input.txt");
+        f.delete();
         System.out.println("file deleted");
     }
 
