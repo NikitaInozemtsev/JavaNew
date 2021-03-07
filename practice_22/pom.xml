@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru</groupId>
-    <artifactId>practice_15</artifactId>
+    <artifactId>practice_22</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -30,7 +30,7 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
-        <dependencies>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>

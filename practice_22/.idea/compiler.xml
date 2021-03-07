@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="practice_22" />
         <module name="d" />
         <module name="practice_21" />
         <module name="practice_20" />
@@ -17,6 +18,7 @@
       <module name="d" options="-parameters" />
       <module name="practice_20" options="-parameters" />
       <module name="practice_21" options="-parameters" />
+      <module name="practice_22" options="-parameters" />
     </option>
   </component>
 </project>
