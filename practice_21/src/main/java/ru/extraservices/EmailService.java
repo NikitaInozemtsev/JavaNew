@@ -20,12 +20,8 @@ import java.util.Properties;
 @Service
 @Transactional
 public class EmailService {
-
-
-
     @Autowired
     private JavaMailSender javaMailSender;
-
 
     @Async
     public void sendEmailItem(Item w) {
@@ -36,23 +32,16 @@ public class EmailService {
         message.setSubject("ItemCreation");
         message.setText("Item created " + w.toString());
         javaMailSender.send(message);
-
-
     }
 
     @Async
     public void sendEmailOrder(Order w) {
-
         SimpleMailMessage message = new SimpleMailMessage();
         //  message.setFrom("kamacringe@yandex.ru");
         message.setTo("okostya2002@yandex.ru");
         message.setSubject("OrderCreation");
         message.setText("Order created " + w.toString());
         javaMailSender.send(message);
-
-
     }
-
-
 
 }

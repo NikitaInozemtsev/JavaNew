@@ -32,7 +32,6 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
 
         UserDetails a = reps.findById(s).get();
-
         return a;
     }
 }

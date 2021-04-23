@@ -24,15 +24,12 @@ public class SchedulerService  {
     @Autowired
     private OrderService or;
 
-
     @Scheduled(cron = "0 */30 * * * *")
     @ManagedOperation
     public void updateItemFile() {
-
         for (File myFile : new File("directory").listFiles()) {
             if (myFile.isFile()) myFile.delete();
         }
-
         try {
             File item = new File(itemFIle);
             File order = new File(orderFile);
@@ -48,6 +45,4 @@ public class SchedulerService  {
             e.printStackTrace();
         }
     }
-
-
 }
