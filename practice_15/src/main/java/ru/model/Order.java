@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * The class forms an order object.
+ */
 @Entity
 @Table(name = "orders1")
 public class Order {
@@ -13,7 +16,8 @@ public class Order {
     @Column(name = "orderDate")
     public String orderDate;
 
-    public Order() {}
+    public Order() {
+    }
 
     public Order(String orderDate) {
         this.orderDate = orderDate;

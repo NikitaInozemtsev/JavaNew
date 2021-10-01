@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * The class forms an item object.
+ */
 @Entity
 @Table(name = "items")
 public class Item {
